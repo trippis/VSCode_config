@@ -1,4 +1,4 @@
-### <b>LOCAL VS CODE SETUP</b>
+## LOCAL VS CODE SETUP
 
 ### GENERAL EXTENSIONS
 
@@ -60,44 +60,51 @@ ii.
 
 4. Create a .eslintrc file in the project root with the following for configs and plugins:
 
+```JSON
    {
-   "extends": ["react-app", "airbnb", "prettier", "node"],
-   "plugins": ["prettier", "node"],
-   "rules": {
-   "prettier/prettier": "error",
-   "no-unused-vars": "warn",
-   "no-console": "off",
-   "func-names": "off",
-   "no-process-exit": "off"
+      "extends": ["react-app", "airbnb", "prettier", "node"],
+      "plugins": ["prettier", "node"],
+      "rules": {
+      "prettier/prettier": "error",
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "func-names": "off",
+      "no-process-exit": "off"
+      }
    }
-   }
+```
 
-   There is a shorthand way of adding the plugin and config support into the "extends" attribute:
-   "extends": ["react-app", "plugin:prettier/recommended"]
+There is a shorthand way of adding the plugin and config support into the "extends" attribute:
+"extends": ["react-app", "plugin:prettier/recommended"]
 
-   Alternatively, instead of manually creating the above file, ensure eslint is installed globally (npm i -g eslint) then run 'eslint --init' and run through the questions which will create the .eslintrc file.
+Alternatively, instead of manually creating the above file, ensure eslint is installed globally (npm i -g eslint) then run 'eslint --init' and run through the questions which will create the .eslintrc file.
 
 5. Create a .prettierrc file in the project root and override default settings if you wish as follows:
+
+```JSON
    {
-   "rule_name": true or false,
+      "rule_name": true or false,
    }
+```
 
 6. In VSCode go to user settings (command-, on a mac, control-, on win/linux) and add these settings to the top:
 
+```JSON
    {
-   "editor.formatOnSave": true,
-   "[javascript]": {
-   "editor.formatOnSave": false
+      "editor.formatOnSave": true,
+      "[javascript]": {
+      "editor.formatOnSave": false
    },
-   "eslint.alwaysShowStatus": true,
-   "prettier.disableLanguages": [
-   "js"
-   ],
-   "files.autoSave": "onFocusChange",
-   "editor.codeActionsOnSave": {
-   "source.fixAll.eslint": true
-   },
+      "eslint.alwaysShowStatus": true,
+      "prettier.disableLanguages": [
+      "js"
+      ],
+      "files.autoSave": "onFocusChange",
+      "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+      },
    }
+```
 
 7. From the terminal initialise the workspace with Git and install Husky and Pretty-Quick:
    initialise Git -> git init
@@ -106,11 +113,13 @@ ii.
 
 8. Go to the projects package.json file and install the Husky hook with this setting in the "scripts" section to format only staged files with prettier just before they are committed:
 
+```JSON
    {
-   "scripts": {
-   "precommit": "pretty-quick --staged",
-   },
+      "scripts": {
+      "precommit": "pretty-quick --staged",
+      },
    }
+```
 
 Reference Links: <br><br>
 a. https://www.youtube.com/watch?v=bfyI9yl3qfE&list=FL2OI9Gwq_jHcqoSinBvunrw&index=8 <br><br>
