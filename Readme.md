@@ -9,7 +9,7 @@
 
 ### CSS / HTML5
 
-1. CSS Peek
+1. CSS Peek - Pranay Prakash
 
 ### C# and .NET core
 
