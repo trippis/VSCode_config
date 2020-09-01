@@ -10,6 +10,7 @@
 ### CSS / HTML5
 
 1. CSS Peek - Pranay Prakash
+2. Live Server - Ritwick Dey
 
 ### C# and .NET core
 
