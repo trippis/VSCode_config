@@ -32,8 +32,7 @@
 ### Containers
 
 1. Docker - Microsoft
-2. Kubernetes - Microsoft
-3. YAML - Red Hat
+2. YAML - Red Hat
 
 ### JAVASCRIPT
 
@@ -46,18 +45,20 @@
 1. Ensure VS Code extensions: ESlint and Prettier are installed.
 
 2. Run project scaffolding:
-   a. 'npx create-react-app [project_name]'; or
-   b. 'npm init -y' in a folder
+
+   - 'npx create-react-app [project_name]'; or
+   - 'npm init -y' in a folder
 
 3. From the terminal execute the dev dependencies and include relevant eslint configs and plugins:
 
 a. npm i -D eslint prettier [eslint-config-\*][eslint-plugin-*]
-i. eslint-config-prettier eslint-plugin-prettier
-ii. eslint-config-node eslint-plugin-node
 
-b. Can also install a well down style guide like airbnb, google etc
-i. npx install-peerdeps --dev eslint-config-airbnb
-ii.
+- eslint-config-prettier eslint-plugin-prettier
+- eslint-config-node eslint-plugin-node
+
+b. Can also install a well known style guide like airbnb, google etc
+
+- npx install-peerdeps --dev eslint-config-airbnb
 
 4. Create a .eslintrc file in the project root with the following for configs and plugins:
 
@@ -108,9 +109,10 @@ Alternatively, instead of manually creating the above file, ensure eslint is ins
 ```
 
 7. From the terminal initialise the workspace with Git and install Husky and Pretty-Quick:
-   initialise Git -> git init
-   install Husky -> npm i husky lint-staged -D
-   install prett-quick -> npm i pretty-quick -D
+
+   - initialise Git -> git init
+   - install Husky -> npm i husky lint-staged -D
+   - install prett-quick -> npm i pretty-quick -D
 
 8. Go to the projects package.json file and install the Husky hook with this setting in the "scripts" section to format only staged files with prettier just before they are committed:
 
